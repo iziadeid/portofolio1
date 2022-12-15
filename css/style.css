@@ -395,69 +395,43 @@ nav ul li a:hover {
 ***************menu***********************
 *******************************************/
 
-.top{
-    width: 100%;
-    height: 80px;
-    background: var(--bgcolor1);
-    border-bottom:2px solid var(--bgcolor2);
-    
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed   ;
-    z-index:100;
-    
-}
-.top .menu{
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.top .menu .cm div{
-    width: 25px;
-    height: 1.5px;
-    background: #fff;
-}
-.top .menu .cm div:nth-child(2){
-    margin: 5px 0 5px 0;
-}
-.top .logo{
-    padding: 20px 10px 10px 25px;
-    font-size:2.5rem;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.dropdown{
-position:fixed ;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: var(--bgcolor2);
-    overflow: hidden;
-    height: 0px;
-    transition: 350ms;
-    z-index:100;
-}
-.dropdown .item_code345{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-}
-.dropdown .item_code345 a{
-    text-decoration: none;
-    color: var(--lightcolor);
-    font-size: 15px;
+#menu {
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: none;
+    background: none;
+    user-select: none;
+    display: none;
 }
 
+button span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: var(--lightcolor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: var(--transition);
+    margin-bottom: 5px;
+}
+
+#menu.is-active span:first-child {
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+#menu.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu.is-active span:last-child {
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+#menu.is-active span {
+    background-color: var(--primarycolor);
+}
 
 
 /*******************************************
